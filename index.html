@@ -386,29 +386,29 @@
       if (playing) {
     staticImage.style.display = 'block';
     gif.style.display = 'none';
-    playButton.style.display = 'block'; // Показать кнопку Play после остановки анимации
+    // playButton.style.display = 'block'; // Показать кнопку Play после остановки анимации
     redirectButton.style.display = 'none'; // Скрыть кнопку перехода на другой сайт
     gif.classList.remove('blurred');
     playing = false;
   } else {
     staticImage.style.display = 'none';
     gif.style.display = 'block';
-    // playButton.style.display = 'none'; // Скрыть кнопку Play во время анимации
+    playButton.style.display = 'none'; // Скрыть кнопку Play во время анимации
     redirectButton.style.display = 'block'; // Скрыть кнопку перехода на другой сайт во время анимации
     redirectButton.style.zIndex = '1'; // Скрыть кнопку перехода на другой сайт во время анимации
     playing = true;
-    setTimeout(function() {
-      console.log('Отображение кнопки перехода на другой сайт');
+    // setTimeout(function() {
+    //   console.log('Отображение кнопки перехода на другой сайт');
 
-      redirectButton.style.display = 'block';
-      redirectButton.style.zIndex = '1';
-    }, 5000); // Показать кнопку перехода на другой сайт через 8 секунд
+    //   redirectButton.style.display = 'block';
+    //   redirectButton.style.zIndex = '1';
+    // }, 1000); // Показать кнопку перехода на другой сайт через 8 секунд
   }
     }
 
     gif.onload = function() {
       setTimeout(function() {
-      console.log('Отображение кнопки перехода на другой сайт');
+      console.log('Отображение кнопки перехода на другой сайт1111');
       gif.style.filter = 'blur(3.5px)';
       gif.style.backdropFilter = 'blur(3.5px)';
       gif.style.background = 'linear-gradient(229.6deg, rgba(255, 255, 255, 0.5) 1.12%, rgba(255, 255, 255, 0.5) 109.74%);';
